@@ -75,6 +75,7 @@ namespace CSC470_P2
             this.buttonKeepIt.TabIndex = 3;
             this.buttonKeepIt.Text = "Keep It";
             this.buttonKeepIt.UseVisualStyleBackColor = true;
+            this.buttonKeepIt.Click += new System.EventHandler(this.buttonKeepIt_Click);
             // 
             // FormSeeFish
             // 

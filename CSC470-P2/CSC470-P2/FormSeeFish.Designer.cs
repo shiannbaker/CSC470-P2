@@ -23,9 +23,9 @@ namespace CSC470_P2
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonThrowItBack = new System.Windows.Forms.Button();
+            this.buttonKeepIt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -33,55 +33,62 @@ namespace CSC470_P2
             // 
             this.pictureBox1.ErrorImage = null;
             this.pictureBox1.Image = global::CSC470_P2.Properties.Resources.Walleye;
-            this.pictureBox1.Location = new System.Drawing.Point(57, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(76, 38);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(366, 271);
+            this.pictureBox1.Size = new System.Drawing.Size(488, 334);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // buttonCancel
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(57, 338);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 34);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancel.Location = new System.Drawing.Point(76, 416);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(105, 42);
+            this.buttonCancel.TabIndex = 1;
+            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
-            // button2
+            // buttonThrowItBack
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(186, 338);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 34);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Throw It Back";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonThrowItBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThrowItBack.Location = new System.Drawing.Point(248, 416);
+            this.buttonThrowItBack.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonThrowItBack.Name = "buttonThrowItBack";
+            this.buttonThrowItBack.Size = new System.Drawing.Size(157, 42);
+            this.buttonThrowItBack.TabIndex = 2;
+            this.buttonThrowItBack.Text = "Throw It Back";
+            this.buttonThrowItBack.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // buttonKeepIt
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(348, 338);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 34);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Keep It";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonKeepIt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonKeepIt.Location = new System.Drawing.Point(464, 416);
+            this.buttonKeepIt.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonKeepIt.Name = "buttonKeepIt";
+            this.buttonKeepIt.Size = new System.Drawing.Size(100, 42);
+            this.buttonKeepIt.TabIndex = 3;
+            this.buttonKeepIt.Text = "Keep It";
+            this.buttonKeepIt.UseVisualStyleBackColor = true;
             // 
             // FormSeeFish
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 411);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(645, 506);
+            this.Controls.Add(this.buttonKeepIt);
+            this.Controls.Add(this.buttonThrowItBack);
+            this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormSeeFish";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Keep it or let it go";
+            this.Load += new System.EventHandler(this.FormSeeFish_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -90,8 +97,8 @@ namespace CSC470_P2
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button buttonThrowItBack;
+        private System.Windows.Forms.Button buttonKeepIt;
     }
 }

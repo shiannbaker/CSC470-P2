@@ -17,24 +17,39 @@ namespace CSC470_P2
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void FormMain_Load(object sender, EventArgs e)
         {
+            this.CenterToScreen();
+        }
+
+        private void buttonSeeFish_Click(object sender, EventArgs e)
+        {
+            DialogResult result;
+            int FishToShow = 0;     // 1 for Crappie, 2 for Perch, 3 for Walleye
+
             if (radioButton1.Checked)
             {
-                FormSeeFish seeFish = new FormSeeFish(1);
-                DialogResult result = seeFish.ShowDialog();
+                FishToShow = 1;
             }
             else if (radioButton2.Checked)
             {
-                FormSeeFish seeFish = new FormSeeFish(2);
-                DialogResult result = seeFish.ShowDialog();
+                FishToShow = 2;
             }
             else if (radioButton3.Checked)
             {
-                FormSeeFish seeFish = new FormSeeFish(3);
-                DialogResult result = seeFish.ShowDialog();
+                FishToShow = 3;
+            }
+
+            FormSeeFish seeFish = new FormSeeFish(FishToShow);
+            result = seeFish.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+
+            }
+            else
+            {
+
             }
         }
-
     }
 }

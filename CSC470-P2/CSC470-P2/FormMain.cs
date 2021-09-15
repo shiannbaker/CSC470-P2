@@ -44,11 +44,22 @@ namespace CSC470_P2
             result = seeFish.ShowDialog();
             if (result == DialogResult.OK)
             {
-
+                if (seeFish._Option.Equals("Throw It Back"))
+                {
+                    MessageBox.Show("Decision is to Throw it back.", "Decision Result");
+                }
+                else if (seeFish._Option.Equals("Keep It"))
+                {
+                    MessageBox.Show("Decision is to keep it.", "Decision Result");
+                }
+                else
+                {
+                    MessageBox.Show("Unknown Decision", "Error");
+                }
             }
             else
             {
-
+                MessageBox.Show("Decision canceled", "Decision Result");
             }
         }
     }

@@ -39,7 +39,7 @@ namespace CSC470_P2
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
+            this.DialogResult = DialogResult.Cancel;    // This button cancels the request when clicked
             this.Close();
         }
 

@@ -42,5 +42,12 @@ namespace CSC470_P2
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
+
+        private void buttonThrowItBack_Click(object sender, EventArgs e)
+        {
+            _Option = "Throw It Back";
+            this.DialogResult = DialogResult.OK;    // This button fulfills the request when clicked
+            this.Close();
+        }
     }
 }

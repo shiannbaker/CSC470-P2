@@ -63,6 +63,7 @@ namespace CSC470_P2
             this.buttonThrowItBack.TabIndex = 2;
             this.buttonThrowItBack.Text = "Throw It Back";
             this.buttonThrowItBack.UseVisualStyleBackColor = true;
+            this.buttonThrowItBack.Click += new System.EventHandler(this.buttonThrowItBack_Click);
             // 
             // buttonKeepIt
             // 
